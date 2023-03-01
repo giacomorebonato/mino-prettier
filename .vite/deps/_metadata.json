@@ -1,6 +1,6 @@
 {
   "hash": "e57ecf7a",
-  "browserHash": "268f6aeb",
+  "browserHash": "3a343c7e",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-dev-runtime.js",
@@ -30,6 +30,12 @@
       "src": "../../node_modules/.pnpm/react-dom@18.2.0_react@18.2.0/node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
       "fileHash": "2c1e3717",
+      "needsInterop": true
+    },
+    "prettier/parser-babel": {
+      "src": "../../node_modules/.pnpm/prettier@2.8.4/node_modules/prettier/parser-babel.js",
+      "file": "prettier_parser-babel.js",
+      "fileHash": "2bd077ec",
       "needsInterop": true
     }
   },

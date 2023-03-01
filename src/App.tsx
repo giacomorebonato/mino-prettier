@@ -1,5 +1,5 @@
-import * as parser from "jsonc-eslint-parser";
 import Prettier from "prettier";
+import * as parserBabel from "prettier/parser-babel";
 import { useState } from "react";
 import "./App.css";
 
@@ -7,7 +7,7 @@ const json5Plugin: Prettier.Plugin = {
   parsers: {
     "json5-parser": {
       parse(text: string) {
-        return parser.parseForESLint(text).ast;
+        return parserBabel.parsers.json5.parse(text);
       },
       astFormat: "estree",
     },
@@ -26,6 +26,7 @@ function App() {
   return (
     <div className="App">
       <textarea
+        rows={20}
         value={text}
         onChange={(e) => {
           setText(e.target.value);
