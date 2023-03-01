@@ -3,13 +3,15 @@ import * as parserBabel from "prettier/parser-babel";
 import { useState } from "react";
 import "./App.css";
 
+const json5Parser = parserBabel.parsers.json5
+
 const json5Plugin: Prettier.Plugin = {
   parsers: {
     "json5-parser": {
+      ...json5Parser,
       parse(text: string) {
-        return parserBabel.parsers.json5.parse(text);
+        return json5Parser.parse(text, {}, {});
       },
-      astFormat: "estree",
     },
   },
 };
